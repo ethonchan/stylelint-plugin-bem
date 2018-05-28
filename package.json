@@ -4,7 +4,7 @@
   "description": "A stylelint plugin that verifies the BEM code style.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "node ./test/index.js"
   },
   "keywords": [
     "stylelint",
