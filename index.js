@@ -62,7 +62,7 @@ module.exports = stylelint.createPlugin(ruleName, function (primaryOption, secon
         var classNameErrorCache = {};
         root.walkRules(function (rule) {
             // Skip keyframes
-            if (rule.parent.name === 'keyframes') {
+            if (/keyframes/.test(rule.parent.name)) {
                 return;
             }
             rule.selectors.forEach(function (selector) {
