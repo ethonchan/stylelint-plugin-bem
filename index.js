@@ -69,6 +69,9 @@ module.exports = stylelint.createPlugin(ruleName, function (primaryOption, secon
                 if (selector.indexOf('(') !== -1 && (selector.indexOf(':') === -1 || selector.indexOf('@') !== -1)) {
                     // Skip less mixins
                     return;
+                }else if(/::/.test(selector)){
+                    // Skip pseudos
+                    return;
                 }
                 resolvedNestedSelector(selector, rule).forEach(function (resolvedSelector) {
                     var classNames = [];
