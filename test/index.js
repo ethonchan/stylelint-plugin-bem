@@ -24,7 +24,9 @@ testRule(plugin.rule, {
         acceptCase('block__element1'),
         acceptCase('block--modifier'),
         acceptCase('block--modifier1'),
-        acceptCase('block')
+        acceptCase('block'),
+        acceptCase('block::before'),
+        acceptCase('block::after')
     ],
     reject: [
         rejectCase('', 'not blank'),
@@ -64,7 +66,9 @@ testRule(plugin.rule, {
         acceptCase('block__element1'),
         acceptCase('block_modifier'),
         acceptCase('block_modifier1'),
-        acceptCase('block')
+        acceptCase('block'),
+        acceptCase('block:before'),
+        acceptCase('block:after')
     ],
     reject: [
         rejectCase('', 'not blank'),
