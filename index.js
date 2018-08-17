@@ -158,7 +158,6 @@ module.exports = stylelint.createPlugin(ruleName, function (primaryOption, secon
         }
 
         var parsedClassName = parseClassName(className);
-        console.log('***************', className, ' -> ', JSON.stringify(parsedClassName));
         var containSeparator = createSeparatorChecker(separator);
 
         if (parsedClassName.some(hasEmptyText)) {
